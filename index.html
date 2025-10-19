@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Великое наследие «железного академика» Б.П.Жукова | МАУК «Культурно-эстетический центр»</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1a2a6c, #2a3a7c, #3a4a8c);
+            color: white;
+            padding: 2rem 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .museum-name {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-top: 5px;
+        }
+        
+        .exhibition-title {
+            text-align: center;
+            margin-top: 2rem;
+        }
+        
+        .exhibition-title h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .exhibition-title .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero {
+            background: url('https://via.placeholder.com/1200x600') no-repeat center center;
+            background-size: cover;
+            height: 400px;
+            position: relative;
+            margin: 2rem 0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .hero-text {
+            max-width: 800px;
+        }
+        
+        .hero-text h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .content-section {
+            background: white;
+            border-radius: 8px;
+            padding: 3rem;
+            margin: 2rem 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+        
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: #1a2a6c;
+            border-bottom: 2px solid #eaeaea;
+            padding-bottom: 0.5rem;
+        }
+        
+        .info-points {
+            list-style-type: none;
+        }
+        
+        .info-points li {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+            border-left: 3px solid #1a2a6c;
+        }
+        
+        .info-points h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: #2a3a7c;
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .gallery-item {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .gallery-caption {
+            padding: 1rem;
+            background: white;
+        }
+        
+        .cta-section {
+            text-align: center;
+            background: linear-gradient(135deg, #1a2a6c, #2a3a7c);
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 8px;
+            margin: 3rem 0;
+        }
+        
+        .cta-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #ff6b6b;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-top: 1.5rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        .cta-button:hover {
+            background: #ff5252;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+        }
+        
+        footer {
+            background: #1a1a2e;
+            color: white;
+            padding: 3rem 0;
+            margin-top: 3rem;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .footer-section {
+            flex: 1;
+            min-width: 300px;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #e9ecef;
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #343a40;
+            color: #adb5bd;
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .exhibition-title h1 {
+                font-size: 2rem;
+            }
+            
+            .hero {
+                height: 300px;
+            }
+            
+            .hero-text h2 {
+                font-size: 1.8rem;
+            }
+            
+            .content-section {
+                padding: 2rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div>
+                    <div class="logo">МАУК «Культурно-эстетический центр»</div>
+                    <div class="museum-name">Музей истории науки</div>
+                </div>
+                <div>
+                    <nav>
+                        <!-- Здесь может быть навигационное меню -->
+                    </nav>
+                </div>
+            </div>
+            
+            <div class="exhibition-title">
+                <h1>Великое наследие «железного академика» Б.П.Жукова</h1>
+                <p class="subtitle">Выставка-реконструкция эпохи научных дискуссий и идеологического давления</p>
+            </div>
+        </div>
+    </header>
+    
+    <main class="container">
+        <div class="hero">
+            <div class="hero-overlay">
+                <div class="hero-text">
+                    <h2>Феномен «железного академика» в контексте эпохи</h2>
+                    <p>Уникальная выставка, основанная на документальных материалах, архивных фотографиях и личных свидетельствах современников</p>
+                </div>
+            </div>
+        </div>
+        
+        <section class="content-section">
+            <h2 class="section-title">О чем вы узнаете на экскурсии</h2>
+            <ul class="info-points">
+                <li>
+                    <h3>Феномен «железного академика»</h3>
+                    <p>Кем был Б.П. Жуков (собирательный образ, навеянный фигурой Т.Д. Лысенко) и почему его личность до сих пор вызывает острые дискуссии среди историков и учёных.</p>
+                </li>
+                <li>
+                    <h3>Социально-политический контекст эпохи</h3>
+                    <p>Как идеи одного человека смогли оказать столь значительное влияние на развитие целой научной отрасли — биологии и генетики — на протяжении нескольких десятилетий.</p>
+                </li>
+                <li>
+                    <h3>Суть «мичуринской агробиологии»</h3>
+                    <p>В чём заключались основные постулаты учения, которое провозгласил академик, и как они противоречили классической генетике.</p>
+                </li>
+                <li>
+                    <h3>Трагические последствия для науки</h3>
+                    <p>Каким образом административные методы в науке привели к разгрому целых научных школ, отставкам и репрессиям видных учёных.</p>
+                </li>
+                <li>
+                    <h3>Влияние на сельское хозяйство страны</h3>
+                    <p>К каким практическим результатам на практике привело внедрение этих теорий в сельское хозяйство, и как это отразилось на экономике.</p>
+                </li>
+            </ul>
+        </section>
+        
+        <section class="content-section">
+            <h2 class="section-title">Экспозиция выставки</h2>
+            <p>Экскурсия основана на документальных материалах, архивных фотографиях, карикатурах из советских газет и личных свидетельствах современников. Это уникальная возможность глубже понять механизмы взаимодействия науки, идеологии и власти в один из ключевых периодов истории нашей страны.</p>
+            
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="002.jpg" alt="Архивные документы">
+                    <div class="gallery-caption">
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="001.jpg" alt="Фотографии эпохи">
+                    <div class="gallery-caption">
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="003.jpg" alt="Газетные карикатуры">
+                    <div class="gallery-caption">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="cta-section">
+            <h2>Посетите уникальную выставку</h2>
+            <p>Узнайте о сложном переплетении науки и идеологии в советский период</p>
+            <a href="#" class="cta-button">Записаться на экскурсию</a>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <p>МАУК «Культурно-эстетический центр»</p>
+                    <p>Адрес: ул. Примерная, д. 123</p>
+                    <p>Телефон: +7 (XXX) XXX-XX-XX</p>
+                    <p>Email: info@cultural-center.ru</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Часы работы</h3>
+                    <p>Пн-Пт: 10:00 - 20:00</p>
+                    <p>Сб-Вс: 11:00 - 19:00</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Дополнительная информация</h3>
+                    <p>Экскурсии проводятся по предварительной записи</p>
+                    <p>Группы до 15 человек</p>
+                    <p>Продолжительность: 1,5 часа</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 МАУК «Культурно-эстетический центр». Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
